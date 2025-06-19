@@ -1,0 +1,16 @@
+.game-canvas {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: #000;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.game-canvas:hover {
+  transform: scale(1.01);
+}
+
+.game-canvas:active {
+  transform: scale(0.99);
+}

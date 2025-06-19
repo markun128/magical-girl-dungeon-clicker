@@ -1,0 +1,40 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.ui-panel {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.bottom-panel {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .ui-panel {
+    flex-direction: column;
+  }
+  
+  .bottom-panel {
+    grid-template-columns: 1fr;
+  }
+}

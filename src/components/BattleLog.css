@@ -1,0 +1,119 @@
+.battle-log {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.battle-log h3 {
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.log-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.log-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.log-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.no-logs {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.log-entry {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 3px solid transparent;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.log-entry.attack {
+  border-left-color: #ff6b6b;
+}
+
+.log-entry.levelup {
+  border-left-color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
+}
+
+.log-entry.item_drop {
+  border-left-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.log-entry.monster_defeat {
+  border-left-color: #ff8a80;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.log-icon {
+  font-size: 14px;
+}
+
+.log-time {
+  font-size: 10px;
+  color: #bbb;
+  font-family: 'Courier New', monospace;
+}
+
+.log-message {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.log-attack-phrase {
+  color: #ff69b4;
+  font-style: italic;
+  font-size: 11px;
+  margin-top: 5px;
+  padding: 5px;
+  background: rgba(255, 105, 180, 0.1);
+  border-radius: 5px;
+  border-left: 2px solid #ff69b4;
+}
+
+.log-item {
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 3px 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: inline-block;
+  text-shadow: 0 0 5px currentColor;
+}

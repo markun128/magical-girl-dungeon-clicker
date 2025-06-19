@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,259 @@
+.collection {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection h3 {
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.collection-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 5px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #bbb;
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sort-controls {
+  margin-bottom: 10px;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.sort-select option {
+  background: #333;
+  color: #fff;
+}
+
+.items-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.items-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.items-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.items-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.no-items {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.collection-item {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.collection-item:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.collection-item.common {
+  border-left: 3px solid #ffffff;
+}
+
+.collection-item.uncommon {
+  border-left: 3px solid #1eff00;
+}
+
+.collection-item.rare {
+  border-left: 3px solid #0099ff;
+}
+
+.collection-item.epic {
+  border-left: 3px solid #a335ee;
+}
+
+.collection-item.legendary {
+  border-left: 3px solid #ff8000;
+  box-shadow: 0 0 10px rgba(255, 128, 0, 0.3);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.item-icon {
+  font-size: 16px;
+}
+
+.item-quantity {
+  font-size: 12px;
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+.item-name {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-shadow: 0 0 5px currentColor;
+}
+
+.item-rarity {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.item-description {
+  color: #ccc;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.item-effect {
+  color: #4caf50;
+  font-size: 10px;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.item-date {
+  font-size: 9px;
+  color: #888;
+}
+
+.sell-section {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sell-price {
+  font-size: 12px;
+  color: #ffd700;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.sell-controls {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.sell-quantity-input {
+  width: 50px;
+  padding: 3px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sell-quantity-input:focus {
+  outline: none;
+  border-color: #4ecdc4;
+}
+
+.sell-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  border: none;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.sell-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
+}
+
+.sell-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sell-all-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.sell-all-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ff8e8e 0%, #ff6b6b 100%);
+}
+
+.sell-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
