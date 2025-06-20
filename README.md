@@ -54,7 +54,22 @@
 
 ### 🐳 Docker を使用（推奨）
 
-#### 本番環境
+#### 🪟 Windows Docker Desktop
+```batch
+# リポジトリをクローン
+git clone https://github.com/markun128/magical-girl-dungeon-clicker.git
+cd magical-girl-dungeon-clicker
+
+# バッチファイルで簡単起動
+start-windows.bat
+
+# または PowerShell で起動
+powershell -ExecutionPolicy Bypass -File start-windows.ps1
+
+# ブラウザで http://localhost:3000 にアクセス
+```
+
+#### 🐧 Linux/Mac 本番環境
 ```bash
 # リポジトリをクローン
 git clone https://github.com/markun128/magical-girl-dungeon-clicker.git
@@ -97,6 +112,23 @@ npm start
 ## 🐳 Docker実行方法
 
 ### 基本コマンド
+
+#### 🪟 Windows Docker Desktop
+```batch
+# 起動
+start-windows.bat
+
+# 停止
+stop-windows.bat
+
+# ログ確認
+logs-windows.bat
+
+# PowerShell版起動
+powershell -ExecutionPolicy Bypass -File start-windows.ps1
+```
+
+#### 🐧 Linux/Mac
 ```bash
 # 本番環境ビルド・起動
 docker-compose up --build

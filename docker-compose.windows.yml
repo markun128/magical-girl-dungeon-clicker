@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  magical-girl-game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: magical-girl-clicker
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      # Windows Docker Desktop compatible volume mount
+      - type: bind
+        source: .
+        target: /app/source
+        read_only: true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - game-network
+
+networks:
+  game-network:
+    driver: bridge
